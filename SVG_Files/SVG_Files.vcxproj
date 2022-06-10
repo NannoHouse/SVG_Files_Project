@@ -143,6 +143,10 @@
     <ClCompile Include="String.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Circle.h" />
+    <ClInclude Include="Line.h" />
+    <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="Shape.h" />
     <ClInclude Include="String.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
