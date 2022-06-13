@@ -9,8 +9,8 @@ private:
 	unsigned int endX, endY;
 	String color;
 public:
-	Line(unsigned int _startX, unsigned int _startY, unsigned int _endX, unsigned int _endY, String color);
-	Line(const Line& other);
+	Line(unsigned int _startX, unsigned int _startY, unsigned int _endX, unsigned int _endY, String _color);
+	Line(const Line& other); // do i need this?
 
 	//getters and setters?
 	virtual void print() const override;
