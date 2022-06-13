@@ -21,7 +21,7 @@ void Line::print() const
 	std::cout << "line " << startX << ' ' << startY << ' ' << endX << ' ' << endY << ' ' << color << std::endl;
 }
 
-Shape* Line::clone() const
+Shape* Line::clone() 
 {
 	return new Line(*this);
 }

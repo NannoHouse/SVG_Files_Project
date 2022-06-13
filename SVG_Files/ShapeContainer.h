@@ -20,6 +20,6 @@ public:
 
 	void add(Shape* newShape);
 
-	friend std::ifstream& operator>>(std::ifstream& in, ShapeContainer& container);
+	//friend std::ifstream& operator>>(std::ifstream& in, ShapeContainer& container);
 
 };

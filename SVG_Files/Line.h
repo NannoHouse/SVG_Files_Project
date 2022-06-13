@@ -14,7 +14,7 @@ public:
 
 	//getters and setters?
 	virtual void print() const override;
-	virtual void read()  const  override; // da podavame potok po referenciq i da chetem ot veche opened file - std::ifstream& in
-	virtual Shape* clone() const override;
+	//virtual void read()  const  override; // da podavame potok po referenciq i da chetem ot veche opened file - std::ifstream& in
+	  Shape* clone();
 
 };

@@ -9,9 +9,9 @@ private:
 
 public:
 	Circle(unsigned int _startX, unsigned int _startY, unsigned int _radius, String _color);
-	Circle(const Circle& other); // do i need this
-	virtual void print()const override;
-	virtual void read()const override;
-	virtual Shape* clone()const override;
+//	Circle(const Circle& other); // do i need this
+	 void print()const override;
+	// void read()const override;
+	 Shape* clone();
 
 };

@@ -50,7 +50,7 @@ void ShapeContainer::copy(const ShapeContainer& other)
 	capacity = other.capacity;
 	f_shapes = new Shape * [capacity];
 
-	for (size_t i = 0; i < size; i++)
+	for (unsigned int i = 0; i < size; i++)
 	{
 		f_shapes[i] = other.f_shapes[i]->clone();
 	}
@@ -76,7 +76,7 @@ void ShapeContainer::resize(size_t newCapacity)
 	capacity = newCapacity;
 	Shape** newShapes = new Shape * [capacity];
 
-	for (size_t i = 0; i < size; i++)
+	for (unsigned int i = 0; i < size; i++)
 	{
 		newShapes[i] = f_shapes[i];
 	}

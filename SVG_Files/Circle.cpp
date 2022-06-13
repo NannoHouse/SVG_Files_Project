@@ -8,12 +8,12 @@ Circle::Circle(unsigned int _startX, unsigned int _startY, unsigned int _radius,
 	color = _color;
 }
 
-void Circle::print() const
+void Circle::print()const
 {
 	std::cout << "circle " << startX << ' ' << startY << ' ' << radius << ' ' << color << std::endl;
 }
 
-Shape* Circle::clone() const
+Shape* Circle::clone() 
 {
 	return new Circle(*this);
 }
