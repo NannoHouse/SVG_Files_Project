@@ -6,7 +6,7 @@
 #include "Line.h"
 #include "Circle.h"
 #include "Rectangle.h"
-ShapeContainer::ShapeContainer(size_t capacity) : capacity(capacity), size(0)
+ShapeContainer::ShapeContainer(unsigned int capacity) : capacity(capacity), size(0)
 {
 	f_shapes = new Shape * [capacity];
 }
@@ -50,7 +50,7 @@ void ShapeContainer::copy(const ShapeContainer& other)
 	capacity = other.capacity;
 	f_shapes = new Shape * [capacity];
 
-	for (unsigned int i = 0; i < size; i++)
+	for ( int i = 0; i < size; i++)
 	{
 		f_shapes[i] = other.f_shapes[i]->clone();
 	}
@@ -66,7 +66,7 @@ void ShapeContainer::clean()
 	delete[] f_shapes;
 }
 
-void ShapeContainer::resize(size_t newCapacity)
+void ShapeContainer::resize(int newCapacity)
 {
 	if (newCapacity < capacity)
 	{
@@ -76,7 +76,7 @@ void ShapeContainer::resize(size_t newCapacity)
 	capacity = newCapacity;
 	Shape** newShapes = new Shape * [capacity];
 
-	for (unsigned int i = 0; i < size; i++)
+	for ( int i = 0; i < size; i++)
 	{
 		newShapes[i] = f_shapes[i];
 	}

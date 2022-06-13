@@ -4,16 +4,16 @@
 class ShapeContainer {
 private:
 	Shape** f_shapes;
-	unsigned int size;
-	unsigned int capacity;
+	 int size;
+	 int capacity;
 
 
 	void copy(const ShapeContainer& other);
 	void clean();
-	void resize(size_t newCapacity);
+	void resize(int newCapacity);
 
 public:
-	ShapeContainer(size_t capacity = 16);
+	ShapeContainer(unsigned int capacity = 16);
 	ShapeContainer(const ShapeContainer& other);
 	ShapeContainer& operator=(const ShapeContainer& other);
 	~ShapeContainer();

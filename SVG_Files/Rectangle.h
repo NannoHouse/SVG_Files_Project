@@ -10,7 +10,7 @@ private:
 public:
 	Rectangle(unsigned int _startX, unsigned int _startY, unsigned int _width, unsigned int _hight, String _color);
 	Rectangle(const Rectangle& other);
-	virtual Shape* clone()override ;
+	virtual Shape* clone()override;
 	 void print()const override;
 	// void read()const override;
 
