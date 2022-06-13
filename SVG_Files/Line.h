@@ -2,7 +2,6 @@
 #include "Shape.h"
 #include "String.h"
 #include <iostream>
-#include <fstream>
 class Line :public Shape {
 private:
 	unsigned int startX, startY;
@@ -14,7 +13,7 @@ public:
 
 	//getters and setters?
 	virtual void print() const override;
-	//virtual void read()  const  override; // da podavame potok po referenciq i da chetem ot veche opened file - std::ifstream& in
+	//virtual void read(td::ifstream& stream)  const  override; // da podavame potok po referenciq i da chetem ot veche opened file - std::ifstream& in
 	  Shape* clone();
 
 };

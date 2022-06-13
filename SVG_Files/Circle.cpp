@@ -8,6 +8,14 @@ Circle::Circle(unsigned int _startX, unsigned int _startY, unsigned int _radius,
 	color = _color;
 }
 
+Circle::Circle(const Circle& other)
+{
+	startX = other.startX;
+	startY = other.startY;
+	radius = other.radius;
+	color = other.color;
+}
+
 void Circle::print()const
 {
 	std::cout << "circle " << startX << ' ' << startY << ' ' << radius << ' ' << color << std::endl;

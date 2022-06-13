@@ -9,9 +9,9 @@ private:
 
 public:
 	Circle(unsigned int _startX, unsigned int _startY, unsigned int _radius, String _color);
-//	Circle(const Circle& other); // do i need this
+	Circle(const Circle& other); // do i need this
 	 void print()const override;
-	// void read()const override;
+	// void read(std::ifstream& stream)const override;
 	 Shape* clone();
 
 };

@@ -53,5 +53,11 @@
     <ClInclude Include="ShapeContainer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CommandHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainCommands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -12,7 +12,7 @@ public:
 	Rectangle(const Rectangle& other);
 	virtual Shape* clone()override;
 	 void print()const override;
-	// void read()const override;
+	// void read(std::ifstream& stream)const override;
 
 
 };
