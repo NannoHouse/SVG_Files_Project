@@ -52,8 +52,8 @@ int main() {
 	container.add(&rect);
 	container.add(&lin);
 	//container.at(1).
-	container.print();
 	container.translate(20, 1, 2);
+	container.print();
 
 	
 	return 0;

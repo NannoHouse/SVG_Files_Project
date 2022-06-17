@@ -22,7 +22,7 @@ public:
 	Shape& at(int index);
 	void print();
 	void erase(unsigned int position); // validation outside
-	void translate(int width , int hight, int position );
+	void translate(unsigned int width , unsigned int hight, unsigned int position );
 	bool within();//TODO
 
 	//friend std::ifstream& operator>>(std::ifstream& in, ShapeContainer& container);

@@ -19,7 +19,7 @@ Line::Line(const Line& other)
 void Line::setX(unsigned int& number)
 {
 	startX += number;
-	endY += number;
+	endX += number;
 }
 void Line::setY(unsigned int& number )
 {
