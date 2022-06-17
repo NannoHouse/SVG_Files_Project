@@ -12,6 +12,14 @@ public:
 	Rectangle(const Rectangle& other);
 	virtual Shape* clone()override;
 	 void print()const override;
+	 virtual String getType();
+
+	 //getters and setters
+	 void setStartX(unsigned int _startX);
+	 void setStartY(unsigned int _startY);
+
+	 int getStartX() const;
+	 int getStartY() const;
 	// void read(std::ifstream& stream)const override;
 
 

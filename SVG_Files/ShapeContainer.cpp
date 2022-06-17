@@ -74,8 +74,9 @@ void ShapeContainer::print()
 	}
 }
 
-void ShapeContainer::erase(unsigned int position) // todo - add function returning type of shape string and if deleted print message
+void ShapeContainer::erase(unsigned int position) 
 {
+	String type = f_shapes[position]->getType();
 	delete f_shapes[position];
 
 	for (int i = position; i < size - 1; i++)
@@ -83,6 +84,7 @@ void ShapeContainer::erase(unsigned int position) // todo - add function returni
 		f_shapes[i] = f_shapes[i + 1];
 	}
 	size--;
+	std::cout << "Erased a "<< type<< '(' << position<<')'<<std::endl;
 }
 
 void ShapeContainer::resize(int newCapacity)
@@ -93,13 +95,13 @@ void ShapeContainer::resize(int newCapacity)
 	}
 
 	capacity = newCapacity;
-	Shape** newArray = new Shape* [capacity];
+	Shape** new_Array = new Shape* [capacity];
 
 	for ( int i = 0; i < size; i++)
 	{
-		newArray[i] = f_shapes[i];
+		new_Array[i] = f_shapes[i];
 	}
 
 	delete[] f_shapes;
-	f_shapes = newArray;
+	f_shapes = new_Array;
 }

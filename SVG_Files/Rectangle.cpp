@@ -27,3 +27,28 @@ void Rectangle::print() const
 		<< ' ' << startX << ' ' << startY << ' ' << width << ' ' << hight << std::endl;
 
 }
+
+String Rectangle::getType()
+{
+	return "rectangle ";
+}
+
+void Rectangle::setStartX(unsigned int _startX)
+{
+	startX = _startX;
+}
+
+void Rectangle::setStartY(unsigned int _startY)
+{
+	startY = _startY;
+}
+
+int Rectangle::getStartX() const
+{
+	return startX;
+}
+
+int Rectangle::getStartY() const
+{
+	return startY;
+}
