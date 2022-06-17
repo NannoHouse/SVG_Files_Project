@@ -21,7 +21,8 @@ public:
 
 	 void print()const override;
 	 virtual String getType();
+//	 virtual ~Circle() {};
 	// void read(std::ifstream& stream)const override;
-	 Shape* clone();
+	 Shape* clone() override;
 
 };

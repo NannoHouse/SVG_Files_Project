@@ -24,6 +24,7 @@ public:
 	virtual void print() const override;
 	virtual String getType();
 	//virtual void read(td::ifstream& stream)  const  override; // da podavame potok po referenciq i da chetem ot veche opened file - std::ifstream& in
-	  Shape* clone();
+	  Shape* clone() override;
+	//  virtual ~Line() {};
 
 };

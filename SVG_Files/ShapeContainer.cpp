@@ -6,7 +6,7 @@
 #include "Line.h"
 #include "Circle.h"
 #include "Rectangle.h"
-ShapeContainer::ShapeContainer(unsigned int capacity) : capacity(capacity), size(0)
+ShapeContainer::ShapeContainer(unsigned int capacity ) : capacity(capacity), size(0)
 {
 	f_shapes = new Shape* [capacity];
 }
@@ -47,10 +47,10 @@ void ShapeContainer::copy(const ShapeContainer& other)
 
 void ShapeContainer::clean()
 {
-	for (int i = 0; i < size; i++)
-	{
-		delete f_shapes[i];
-	}
+	//for (int i = 0; i < size; i++)
+	//{
+	//	delete f_shapes[i];
+	//}
 
 	delete[] f_shapes;
 }
@@ -72,14 +72,18 @@ void ShapeContainer::print()
 		std::cout << i << ' ';
 		f_shapes[i]->print();
 	}
+	std::cout << "ENDED PRINTING" << std::endl;
+
 }
 
 void ShapeContainer::erase(unsigned int position) 
 {
 	String type = f_shapes[position]->getType();
-	delete f_shapes[position];
+	f_shapes[position]->print();
+//	delete f_shapes[position];
+	std::cout << "we deleted" << std::endl;
 
-	for (int i = position; i < size - 1; i++)
+	for (int i = position; i < size  ; i++)
 	{
 		f_shapes[i] = f_shapes[i + 1];
 	}

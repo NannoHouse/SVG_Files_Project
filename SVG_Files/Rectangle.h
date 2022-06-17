@@ -20,6 +20,7 @@ public:
 
 	 int getStartX() const;
 	 int getStartY() const;
+//	 virtual ~Rectangle() {};
 	// void read(std::ifstream& stream)const override;
 
 

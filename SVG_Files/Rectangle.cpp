@@ -24,7 +24,7 @@ Shape* Rectangle::clone()
 void Rectangle::print() const
 {
 	std::cout << "rectangle"
-		<< ' ' << startX << ' ' << startY << ' ' << width << ' ' << hight << std::endl;
+		<< ' ' << startX << ' ' << startY << ' ' << width << ' ' << hight <<' '<<color << std::endl;
 
 }
 
