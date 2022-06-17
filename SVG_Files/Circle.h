@@ -13,11 +13,11 @@ public:
 	Circle(const Circle& other); // do i need this
 
 			//getters and setters
-	void setStartX(unsigned int _startX);
-	void setStartY(unsigned int _startY);
-
-	int getStartX() const;
-	int getStartY() const;
+	 void setX(unsigned int& number) override;
+	 void setY(unsigned int& number) override;
+	
+	 int getX() const override;
+	 int getY() const override;
 
 	 void print()const override;
 	 virtual String getType();

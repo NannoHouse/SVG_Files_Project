@@ -16,6 +16,23 @@ Line::Line(const Line& other)
 	endY = other.endY;
 	color = other.color;
 }
+void Line::setX(unsigned int& number)
+{
+	startX = number;
+}
+void Line::setY(unsigned int& number)
+{
+	startY = number;
+}
+int Line::getX() const
+{
+	return startX;
+}
+int Line::getY() const
+{
+	return startY;
+}
+
 void Line::print() const
 {
 	std::cout << "line " << startX << ' ' << startY << ' ' << endX << ' ' << endY << ' ' << color << std::endl;
@@ -31,22 +48,22 @@ Shape* Line::clone()
 	return new Line(*this);
 }
 
-int Line::getStartX() const
-{
-	return startX;
-}
-
-int Line::getStartY() const
-{
-	return startY;
-}
-
-int Line::getEndX() const
-{
-	return endX;
-}
-
-int Line::getEndY() const
-{
-	return endY;
-}
+//int Line::getStartX() const
+//{
+//	return startX;
+//}
+//
+//int Line::getStartY() const
+//{
+//	return startY;
+//}
+//
+//int Line::getEndX() const
+//{
+//	return endX;
+//}
+//
+//int Line::getEndY() const
+//{
+//	return endY;
+//}

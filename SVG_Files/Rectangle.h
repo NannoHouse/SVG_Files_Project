@@ -15,11 +15,11 @@ public:
 	 virtual String getType();
 
 	 //getters and setters
-	 void setStartX(unsigned int _startX);
-	 void setStartY(unsigned int _startY);
+	 void setX(unsigned int& number) override;
+	 void setY(unsigned int& number) override;
 
-	 int getStartX() const;
-	 int getStartY() const;
+	 int getX() const override;
+	 int getY() const override;
 //	 virtual ~Rectangle() {};
 	// void read(std::ifstream& stream)const override;
 

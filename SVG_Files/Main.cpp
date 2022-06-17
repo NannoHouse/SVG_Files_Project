@@ -47,13 +47,13 @@ int main() {
 	Circle crcl(2,3,4,"pink");
 	Rectangle rect(4,5,12,12,"black");
 	Line lin(2,3,4,5,"orange");
+	
 	container.add(&crcl);
 	container.add(&rect);
 	container.add(&lin);
-
+	//container.at(1).
 	container.print();
-	container.erase(2);
-	container.print();
+	container.translate(20, 1, 2);
 
 	
 	return 0;

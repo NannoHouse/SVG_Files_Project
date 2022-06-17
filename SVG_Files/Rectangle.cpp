@@ -33,22 +33,23 @@ String Rectangle::getType()
 	return "rectangle ";
 }
 
-void Rectangle::setStartX(unsigned int _startX)
+void Rectangle::setX(unsigned int& number)
 {
-	startX = _startX;
+	startX = number;
 }
 
-void Rectangle::setStartY(unsigned int _startY)
+void Rectangle::setY(unsigned int& number)
 {
-	startY = _startY;
+	startY = number;
 }
 
-int Rectangle::getStartX() const
+int Rectangle::getX() const
 {
 	return startX;
 }
 
-int Rectangle::getStartY() const
+int Rectangle::getY() const
 {
 	return startY;
 }
+

@@ -65,11 +65,12 @@ void ShapeContainer::add(Shape* newShape)
 	size++;
 }
 
+
 void ShapeContainer::print()
 {
 	for (int i = 0; i < size; i++)
 	{
-		std::cout << i << ' ';
+		std::cout << i << ". ";
 		f_shapes[i]->print();
 	}
 	std::cout << "ENDED PRINTING" << std::endl;
@@ -89,6 +90,16 @@ void ShapeContainer::erase(unsigned int position)
 	}
 	size--;
 	std::cout << "Erased a "<< type<< '(' << position<<')'<<std::endl;
+}
+
+void ShapeContainer::translate(int width, int hight, int position)
+{
+	if (width != 0 && hight != 0)
+	{
+		unsigned int neverbefore = width + 25;
+		f_shapes[position];
+		//fshape[] -> circle.getstartX
+	}
 }
 
 void ShapeContainer::resize(int newCapacity)

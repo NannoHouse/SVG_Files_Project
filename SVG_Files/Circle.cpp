@@ -16,25 +16,27 @@ Circle::Circle(const Circle& other)
 	color = other.color;
 }
 
-void Circle::setStartX(unsigned int _startX)
+void Circle::setX(unsigned int& number)
 {
-	startX = _startX;
+	startX = number;
 }
 
-void Circle::setStartY(unsigned int _startY)
+void Circle::setY(unsigned int& number)
 {
-	startY = _startY;
+	startY = number;
 }
 
-int Circle::getStartX() const
+int Circle::getX() const
 {
 	return startX;
 }
 
-int Circle::getStartY() const
+int Circle::getY() const
 {
 	return startY;
 }
+
+
 
 void Circle::print()const
 {
