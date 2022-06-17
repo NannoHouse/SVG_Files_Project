@@ -20,7 +20,7 @@ public:
 
 	void add(Shape* newShape);
 	void print();
-	void erase();
+	void erase(unsigned int position);
 	void translate(int width, int hight, int position);
 	bool within();//TODO
 

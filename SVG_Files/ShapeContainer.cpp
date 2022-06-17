@@ -74,6 +74,17 @@ void ShapeContainer::print()
 	}
 }
 
+void ShapeContainer::erase(unsigned int position) // todo - add function returning type of shape string and if deleted print message
+{
+	for (int i = 0; i < size; i++)
+	{
+		if (i == position)
+		{
+			delete f_shapes[i];
+		}
+	}
+}
+
 void ShapeContainer::resize(int newCapacity)
 {
 	if (newCapacity < capacity)
