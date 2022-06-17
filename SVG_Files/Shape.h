@@ -1,5 +1,4 @@
 #pragma once
-#include<fstream>
 class Shape {
 public:
 	~Shape() {};

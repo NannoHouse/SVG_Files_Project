@@ -8,7 +8,7 @@
 #include "Rectangle.h"
 ShapeContainer::ShapeContainer(unsigned int capacity) : capacity(capacity), size(0)
 {
-	f_shapes = new Shape * [capacity];
+	f_shapes = new Shape* [capacity];
 }
 
 ShapeContainer::ShapeContainer(const ShapeContainer& other)
@@ -33,6 +33,27 @@ ShapeContainer::~ShapeContainer()
 }
 
 
+void ShapeContainer::copy(const ShapeContainer& other)
+{
+	size = other.size;
+	capacity = other.capacity;
+	f_shapes = new Shape* [capacity];
+
+	for ( int i = 0; i < size; i++)
+	{
+		f_shapes[i] = other.f_shapes[i]->clone();
+	}
+}
+
+void ShapeContainer::clean()
+{
+	for (int i = 0; i < size; i++)
+	{
+		delete f_shapes[i];
+	}
+
+	delete[] f_shapes;
+}
 void ShapeContainer::add(Shape* newShape)
 {
 	if (size >= capacity)
@@ -44,26 +65,13 @@ void ShapeContainer::add(Shape* newShape)
 	size++;
 }
 
-void ShapeContainer::copy(const ShapeContainer& other)
+void ShapeContainer::print()
 {
-	size = other.size;
-	capacity = other.capacity;
-	f_shapes = new Shape * [capacity];
-
-	for ( int i = 0; i < size; i++)
+	for (int i = 0; i < size; i++)
 	{
-		f_shapes[i] = other.f_shapes[i]->clone();
+		std::cout << i << ' ';
+		f_shapes[i]->print();
 	}
-}
-
-void ShapeContainer::clean()
-{
-	for (size_t i = 0; i < size; i++)
-	{
-		delete f_shapes[i];
-	}
-
-	delete[] f_shapes;
 }
 
 void ShapeContainer::resize(int newCapacity)
@@ -74,13 +82,13 @@ void ShapeContainer::resize(int newCapacity)
 	}
 
 	capacity = newCapacity;
-	Shape** newShapes = new Shape * [capacity];
+	Shape** newArray = new Shape* [capacity];
 
 	for ( int i = 0; i < size; i++)
 	{
-		newShapes[i] = f_shapes[i];
+		newArray[i] = f_shapes[i];
 	}
 
 	delete[] f_shapes;
-	f_shapes = newShapes;
+	f_shapes = newArray;
 }

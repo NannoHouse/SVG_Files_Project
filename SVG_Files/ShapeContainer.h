@@ -7,7 +7,7 @@ private:
 	 int size;
 	 int capacity;
 
-
+	 //aditional functions
 	void copy(const ShapeContainer& other);
 	void clean();
 	void resize(int newCapacity);
@@ -19,6 +19,10 @@ public:
 	~ShapeContainer();
 
 	void add(Shape* newShape);
+	void print();
+	void erase();
+	void translate(int width, int hight, int position);
+	bool within();//TODO
 
 	//friend std::ifstream& operator>>(std::ifstream& in, ShapeContainer& container);
 

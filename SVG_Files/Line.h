@@ -1,7 +1,6 @@
 #pragma once
 #include "Shape.h"
 #include "String.h"
-#include <iostream>
 class Line :public Shape {
 private:
 	unsigned int startX, startY;

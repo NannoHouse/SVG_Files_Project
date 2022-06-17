@@ -1,4 +1,5 @@
 #pragma once
+#pragma once
 #include "String.h"
 #include "Shape.h"
 class Circle : public Shape{
