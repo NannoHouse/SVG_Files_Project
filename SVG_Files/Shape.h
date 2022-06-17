@@ -7,8 +7,8 @@ public:
 	virtual void print() const = 0;
 	virtual String getType() = 0;
 	
-	virtual void setX(unsigned int& number) = 0;
-	virtual void setY(unsigned int& number) = 0;
+	virtual void setX(unsigned int& number) =0;
+	virtual void setY(unsigned int& number)=0;
 
 	virtual int getX() const = 0;
 	virtual int getY() const  = 0;

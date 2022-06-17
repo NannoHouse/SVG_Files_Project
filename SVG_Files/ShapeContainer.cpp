@@ -97,7 +97,7 @@ void ShapeContainer::translate(int width, int hight, int position)
 	if (width != 0 && hight != 0)
 	{
 		unsigned int neverbefore = width + 25;
-		f_shapes[position];
+		//f_shapes[position].
 		//fshape[] -> circle.getstartX
 	}
 }

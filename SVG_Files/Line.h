@@ -11,17 +11,15 @@ public:
 	Line(const Line& other); // do i need this?
 
 		//getters and setters
-	void setX(unsigned int& number) override;
+	void setX(unsigned int& number) override ;
 	void setY(unsigned int& number) override;
 
 	int getX() const override;
 	int getY() const override;
 
-	void setEndX(unsigned int& length);
-	void setendY();
 	virtual void print() const override;
+	Shape* clone() override;
 	virtual String getType();
 	//virtual void read(td::ifstream& stream)  const  override; // da podavame potok po referenciq i da chetem ot veche opened file - std::ifstream& in
-	  Shape* clone() override;
 
 };

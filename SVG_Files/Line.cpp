@@ -18,11 +18,13 @@ Line::Line(const Line& other)
 }
 void Line::setX(unsigned int& number)
 {
-	startX = number;
+	startX += number;
+	endY += number;
 }
-void Line::setY(unsigned int& number)
+void Line::setY(unsigned int& number )
 {
-	startY = number;
+	startY += number;
+	endY += number;
 }
 int Line::getX() const
 {
