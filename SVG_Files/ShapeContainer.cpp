@@ -76,13 +76,13 @@ void ShapeContainer::print()
 
 void ShapeContainer::erase(unsigned int position) // todo - add function returning type of shape string and if deleted print message
 {
-	for (int i = 0; i < size; i++)
+	delete f_shapes[position];
+
+	for (int i = position; i < size - 1; i++)
 	{
-		if (i == position)
-		{
-			delete f_shapes[i];
-		}
+		f_shapes[i] = f_shapes[i + 1];
 	}
+	size--;
 }
 
 void ShapeContainer::resize(int newCapacity)
