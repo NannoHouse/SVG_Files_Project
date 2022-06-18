@@ -23,6 +23,7 @@ public:
 	virtual void print() const override;
 	Shape* clone() override;
 	virtual String getType();
-	//virtual void read(td::ifstream& stream)  const  override; // da podavame potok po referenciq i da chetem ot veche opened file - std::ifstream& in
+	//virtual friend std::istream& operator >> (std::istream& in, Shape& shape)override;
+	virtual void read()  override; // da podavame potok po referenciq i da chetem ot veche opened file - std::ifstream& in
 
 };

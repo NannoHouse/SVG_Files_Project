@@ -75,7 +75,11 @@ bool Circle::isWithinRectangle(int rx, int ry, int width, int hight)
 		return false;
 }
 
-Shape* Circle::clone() 
+void Circle::read()
+{
+}
+
+Shape* Circle::clone()
 {
 	return new Circle(*this);
 }

@@ -31,7 +31,9 @@ int main() {
 				myProgram.create();
 				break;
 			case 2:
-				myProgram.erase();
+				int position;
+				position = 2;
+				myProgram.erase(position);
 				break;
 			case 3:
 				myProgram.translate();
@@ -43,13 +45,15 @@ int main() {
 				myProgram.print();
 				break;
 			case 10:
-				//myProgram.open(String command);
+				////remove command part
+				//String fileName;
+				//myProgram.open(fileName);
 				isOpened = true;
 				break;
 			case 11:
 				if (isAlreadyOpened(isOpened)) // needt to be opened for it to be closed
 				{
-					myProgram.close();
+					isOpened = false;
 				}
 				break;
 			case 12:

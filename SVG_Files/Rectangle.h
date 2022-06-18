@@ -25,7 +25,7 @@ public:
 
 
 //	 virtual ~Rectangle() {};
-	// void read(std::ifstream& stream)const override;
+	 virtual void read()  override;
 
 
 };

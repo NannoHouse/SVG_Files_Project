@@ -75,6 +75,11 @@ String Line::getType()
 	return "line";
 }
 
+void Line::read()
+{
+}
+
+
 Shape* Line::clone() 
 {
 	return new Line(*this);

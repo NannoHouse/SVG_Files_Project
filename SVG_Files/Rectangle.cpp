@@ -74,3 +74,8 @@ int Rectangle::getY() const
 	return startY;
 }
 
+void Rectangle::read()
+{
+
+}
+

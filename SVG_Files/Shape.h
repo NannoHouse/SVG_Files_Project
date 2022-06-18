@@ -15,7 +15,7 @@ public:
 	virtual int getX() const = 0;
 	virtual int getY() const  = 0;
 
+	
 
-
-	//virtual void read(std::ifstream& stream) = 0;
+	virtual void read() = 0;
 };
