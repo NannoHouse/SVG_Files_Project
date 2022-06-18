@@ -1,6 +1,6 @@
 #include "Rectangle.h"
 #include <cmath>
-Rectangle::Rectangle(unsigned int _startX, unsigned int _startY, unsigned int _width, unsigned int _hight, String _color)
+Rectangle::Rectangle( int _startX,  int _startY,  int _width,  int _hight, String _color)
 {
 	startX = _startX;
 	startY = _startY;
@@ -54,12 +54,12 @@ bool Rectangle::isWithinRectangle(int rx, int ry, int width, int hight)
 	return false;
 }
 
-void Rectangle::setX(unsigned int& number)
+void Rectangle::setX( int& number)
 {
 	startX = number;
 }
 
-void Rectangle::setY(unsigned int& number)
+void Rectangle::setY( int& number)
 {
 	startY = number;
 }

@@ -92,7 +92,7 @@ void ShapeContainer::erase(unsigned int position)
 	std::cout << "Erased a "<< type<< '(' << position<<')'<<std::endl;
 }
 
-void ShapeContainer::translate(unsigned int width, unsigned int hight, unsigned int position)
+void ShapeContainer::translate( int width,  int hight,  int position)
 {
 		if (position !=-1)
 		{

@@ -36,12 +36,12 @@ bool Line::isWithinRectangle(int rx, int ry, int width, int hight)
 	}
 	return false;
 }
-void Line::setX(unsigned int& number)
+void Line::setX( int& number)
 {
 	startX += number;
 	endX += number;
 }
-void Line::setY(unsigned int& number )
+void Line::setY( int& number )
 {
 	startY += number;
 	endY += number;

@@ -8,7 +8,7 @@ private:
 	unsigned int width, hight;
 	String color;
 public:
-	Rectangle(unsigned int _startX, unsigned int _startY, unsigned int _width, unsigned int _hight, String _color);
+	Rectangle( int _startX,  int _startY,  int _width,  int _hight, String _color);
 	Rectangle(const Rectangle& other);
 	virtual Shape* clone()override;
 	 void print()const override;
@@ -17,8 +17,8 @@ public:
 	 bool isWithinRectangle(int rx, int ry, int width, int hight) override;
 
 	 //getters and setters
-	 void setX(unsigned int& number) override;
-	 void setY(unsigned int& number) override;
+	 void setX( int& number) override;
+	 void setY( int& number) override;
 
 	 int getX() const override;
 	 int getY() const override;

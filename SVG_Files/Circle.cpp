@@ -17,12 +17,12 @@ Circle::Circle(const Circle& other)
 	color = other.color;
 }
 
-void Circle::setX(unsigned int& number)
+void Circle::setX( int& number)
 {
 	startX = number;
 }
 
-void Circle::setY(unsigned int& number)
+void Circle::setY( int& number)
 {
 	startY = number;
 }
@@ -66,8 +66,7 @@ bool Circle::isWithinCircle(int cx, int cy, int radius)
 }
 
 bool Circle::isWithinRectangle(int rx, int ry, int width, int hight)
-{								// right and down
-	//if (getX()+getRadius()> ry+ width  || getY()+getRadius() > ry+hight)
+{
 	
 	if (getX()<= this->radius + rx && getY()<= this->radius + ry && getX() + this->radius <= rx+width && getY() + this->radius <= ry + hight)
 	{

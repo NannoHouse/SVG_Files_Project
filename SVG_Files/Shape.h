@@ -9,8 +9,8 @@ public:
 	virtual bool isWithinCircle(int cx, int cy, int radius) = 0;
 	virtual bool isWithinRectangle(int rx, int ry, int width, int hight) = 0;
 	
-	virtual void setX(unsigned int& number) =0;
-	virtual void setY(unsigned int& number)=0;
+	virtual void setX( int& number) =0;
+	virtual void setY( int& number)=0;
 
 	virtual int getX() const = 0;
 	virtual int getY() const  = 0;

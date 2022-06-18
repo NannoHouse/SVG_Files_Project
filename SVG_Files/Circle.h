@@ -13,8 +13,8 @@ public:
 	Circle(const Circle& other); // do i need this
 
 			//getters and setters
-	 void setX(unsigned int& number) override;
-	 void setY(unsigned int& number) override;
+	 void setX( int& number) override;
+	 void setY( int& number) override;
 	
 	 int getX() const override;
 	 int getY() const override;

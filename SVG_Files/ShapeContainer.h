@@ -19,10 +19,10 @@ public:
 	~ShapeContainer();
 
 	void add(Shape* newShape);
-	Shape& at(int index);
+//	Shape& at(int index);
 	void print();
 	void erase(unsigned int position); // validation outside
-	void translate(unsigned int width , unsigned int hight, unsigned int position );
+	void translate( int width ,  int hight,  int position );
 	void withinCircle(int x, int y, int radius);//TODO
 	void withinRectangle(int x, int y, int width, int hight);//TODO
 
