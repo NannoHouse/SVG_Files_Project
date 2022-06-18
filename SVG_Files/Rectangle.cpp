@@ -1,5 +1,5 @@
 #include "Rectangle.h"
-
+#include <cmath>
 Rectangle::Rectangle(unsigned int _startX, unsigned int _startY, unsigned int _width, unsigned int _hight, String _color)
 {
 	startX = _startX;
@@ -35,11 +35,22 @@ String Rectangle::getType()
 
 bool Rectangle::isWithinCircle(int cx, int cy, int radius)
 {
+	if (sqrt(pow(getX() - cx, 2) + pow(getY() - cy, 2))<radius &&
+		sqrt(pow(getX() + this->width - cx, 2) + pow(getY() - cy, 2))<radius &&
+		sqrt(pow(getX() + this->width - cx, 2) + pow(getY()+this->hight - cy, 2)) < radius&&
+		sqrt(pow(getX() - cx, 2) + pow(getY()+ this->hight - cy, 2)) < radius)
+	{
+		return true;
+	}
 	return false;
 }
 
 bool Rectangle::isWithinRectangle(int rx, int ry, int width, int hight)
 {
+	if (rx<=getX() && ry <= getY() && rx + width >= (getX() + this->width) && ry+hight >= (getY()+ this->hight) )
+	{
+		return true;
+	}
 	return false;
 }
 

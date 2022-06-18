@@ -66,12 +66,14 @@ bool Circle::isWithinCircle(int cx, int cy, int radius)
 }
 
 bool Circle::isWithinRectangle(int rx, int ry, int width, int hight)
-{
-	if (true)
+{								// right and down
+	//if (getX()+getRadius()> ry+ width  || getY()+getRadius() > ry+hight)
+	
+	if (getX()<= this->radius + rx && getY()<= this->radius + ry && getX() + this->radius <= rx+width && getY() + this->radius <= ry + hight)
 	{
-
+		return true;
 	}
-	return false;
+		return false;
 }
 
 Shape* Circle::clone() 

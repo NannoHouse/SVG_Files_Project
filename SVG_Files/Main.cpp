@@ -44,14 +44,28 @@ int main() {
 
 	//} while (isRunning);
 	ShapeContainer container;
-	Circle crcl(10,10,5,"pink");
-	Circle crc2(9, 9, 3, "green");
+//	Circle crcl(2,2,1,"pink");
+	Circle crc2(5, 5, 10, "green");
 
-	//Rectangle rect(4,5,12,12,"black");
+	Rectangle rect(5,5,10,10,"black");
+	Rectangle rect2(-1000, -1000, 10, 20, "white");
+	Rectangle rect3(100, 60, 10, 10, "pink");
+
 	//Line lin(2,3,4,5,"orange");
+	//Line lin2(0, 0, 11, 5, "orange");
+
 	
+	container.add(&rect);
 	container.add(&crc2);
-	container.withinCircle(10,10,5);
+
+	container.add(&rect2);
+	container.add(&rect3);
+
+	//container.add(&rect2);
+	//container.add(&rect3);
+
+	container.withinCircle(0,0,5);
+	container.withinRectangle(0,0,30,30);
 
 //	container.add(&rect);
 	//container.add(&lin);

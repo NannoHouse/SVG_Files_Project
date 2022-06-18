@@ -123,6 +123,17 @@ void ShapeContainer::withinCircle(int x, int y, int radius)
 	
 }
 
+void ShapeContainer::withinRectangle(int x, int y, int width, int hight)
+{
+	for (int i = 0; i < size; i++)
+	{
+		if ((*f_shapes[i]).isWithinRectangle(x,y,width, hight))
+		{
+			f_shapes[i]->print();
+		}
+	}
+}
+
 void ShapeContainer::resize(int newCapacity)
 {
 	if (newCapacity < capacity)

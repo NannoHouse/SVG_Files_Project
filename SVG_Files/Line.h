@@ -18,7 +18,8 @@ public:
 
 	int getX() const override;
 	int getY() const override;
-
+	int getEndX()const;
+	int getEndY()const;
 	virtual void print() const override;
 	Shape* clone() override;
 	virtual String getType();

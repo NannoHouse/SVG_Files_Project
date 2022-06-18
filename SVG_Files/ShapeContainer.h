@@ -24,6 +24,8 @@ public:
 	void erase(unsigned int position); // validation outside
 	void translate(unsigned int width , unsigned int hight, unsigned int position );
 	void withinCircle(int x, int y, int radius);//TODO
+	void withinRectangle(int x, int y, int width, int hight);//TODO
+
 
 	//friend std::ifstream& operator>>(std::ifstream& in, ShapeContainer& container);
 
