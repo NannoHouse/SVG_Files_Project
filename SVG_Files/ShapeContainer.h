@@ -23,7 +23,7 @@ public:
 	void print();
 	void erase(unsigned int position); // validation outside
 	void translate(unsigned int width , unsigned int hight, unsigned int position );
-	bool within();//TODO
+	void withinCircle(int x, int y, int radius);//TODO
 
 	//friend std::ifstream& operator>>(std::ifstream& in, ShapeContainer& container);
 

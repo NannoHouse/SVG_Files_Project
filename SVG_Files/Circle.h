@@ -18,9 +18,12 @@ public:
 	
 	 int getX() const override;
 	 int getY() const override;
+	 int getRadius()const;
 
 	 void print()const override;
 	 virtual String getType();
+	  bool isWithinCircle(int cx, int cy, int radius) override;
+	  bool isWithinRectangle(int rx, int ry, int width, int hight) override;
 //	 virtual ~Circle() {};
 	// void read(std::ifstream& stream)const override;
 	 Shape* clone() override;

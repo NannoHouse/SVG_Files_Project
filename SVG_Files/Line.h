@@ -9,6 +9,8 @@ private:
 public:
 	Line(unsigned int _startX, unsigned int _startY, unsigned int _endX, unsigned int _endY, String _color);
 	Line(const Line& other); // do i need this?
+	bool isWithinCircle(int cx, int cy, int radius) override;
+	bool isWithinRectangle(int rx, int ry, int width, int hight) override;
 
 		//getters and setters
 	void setX(unsigned int& number) override ;

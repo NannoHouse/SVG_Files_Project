@@ -101,13 +101,26 @@ void ShapeContainer::translate(unsigned int width, unsigned int hight, unsigned 
 			std::cout << "Translated figure in position "<< position<< std::endl;
 		}
 		else {
-			for (size_t i = 0; i < size-1; i++)
+			for (int i = 0; i < size-1; i++)
 			{
 				(*f_shapes[i]).setX(width);
 				(*f_shapes[i]).setY(hight);
 			}
 			std::cout << "Translated all figures" << std::endl;
 		}
+}
+
+void ShapeContainer::withinCircle(int x, int y, int radius)
+{
+	for (int i = 0; i < size ; i++)
+	{
+		if ((*f_shapes[i]).isWithinCircle(x, y, radius))
+		{
+			f_shapes[i]->print();
+		}
+
+	}
+	
 }
 
 void ShapeContainer::resize(int newCapacity)

@@ -2,10 +2,12 @@
 #include "String.h"
 class Shape {
 public:
-	//virtual  ~Shape() {};
+	virtual  ~Shape() = default;
 	virtual Shape* clone()  = 0;
 	virtual void print() const = 0;
 	virtual String getType() = 0;
+	virtual bool isWithinCircle(int cx, int cy, int radius) = 0;
+	virtual bool isWithinRectangle(int rx, int ry, int width, int hight) = 0;
 	
 	virtual void setX(unsigned int& number) =0;
 	virtual void setY(unsigned int& number)=0;

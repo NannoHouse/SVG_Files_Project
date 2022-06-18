@@ -33,6 +33,16 @@ String Rectangle::getType()
 	return "rectangle ";
 }
 
+bool Rectangle::isWithinCircle(int cx, int cy, int radius)
+{
+	return false;
+}
+
+bool Rectangle::isWithinRectangle(int rx, int ry, int width, int hight)
+{
+	return false;
+}
+
 void Rectangle::setX(unsigned int& number)
 {
 	startX = number;

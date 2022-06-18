@@ -16,6 +16,14 @@ Line::Line(const Line& other)
 	endY = other.endY;
 	color = other.color;
 }
+bool Line::isWithinCircle(int cx, int cy, int radius)
+{
+	return false;
+}
+bool Line::isWithinRectangle(int rx, int ry, int width, int hight)
+{
+	return false;
+}
 void Line::setX(unsigned int& number)
 {
 	startX += number;
