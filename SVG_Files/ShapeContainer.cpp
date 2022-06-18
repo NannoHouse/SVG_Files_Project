@@ -77,12 +77,9 @@ void ShapeContainer::print()
 
 }
 
-void ShapeContainer::erase(unsigned int position) 
+void ShapeContainer::erase(const int& position) 
 {
 	String type = f_shapes[position]->getType();
-	f_shapes[position]->print();
-//	delete f_shapes[position];
-	std::cout << "we deleted" << std::endl;
 
 	for (int i = position; i < size  ; i++)
 	{

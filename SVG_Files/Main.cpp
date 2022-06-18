@@ -1,11 +1,12 @@
 #include <iostream>
 #include "String.h"
+#include "CommandHelper.h"
 #include "ShapeContainer.h"
 #include "Line.h"
 #include "Circle.h"
 #include "Rectangle.h"
 int main() {
-	//String imput;
+	String imput;
 	//bool isRunning = true;
 	//bool openedFile = false;
 	//do
@@ -64,14 +65,15 @@ int main() {
 	//container.add(&rect2);
 	//container.add(&rect3);
 
-	container.withinCircle(0,0,5);
-	container.withinRectangle(0,0,30,30);
+	//container.withinCircle(0,0,5);
+	//container.withinRectangle(0,0,30,30);
+	container.erase(2);
 
 //	container.add(&rect);
 	//container.add(&lin);
 	//container.at(1).
 	//container.translate(20, 1, 2);
-	//container.print();
+	container.print();
 
 	
 	return 0;

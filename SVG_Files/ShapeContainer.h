@@ -21,8 +21,8 @@ public:
 	void add(Shape* newShape);
 //	Shape& at(int index);
 	void print();
-	void erase(unsigned int position); // validation outside
-	void translate( int width ,  int hight,  int position );
+	void erase(const int& position); // validation outside
+	void translate( int width, int hight, int position );
 	void withinCircle(int x, int y, int radius);//TODO
 	void withinRectangle(int x, int y, int width, int hight);//TODO
 

@@ -4,8 +4,8 @@
 
 class Rectangle:public Shape {
 private:
-	unsigned int startX, startY;
-	unsigned int width, hight;
+	 int startX, startY;
+	 int width, hight;
 	String color;
 public:
 	Rectangle( int _startX,  int _startY,  int _width,  int _hight, String _color);
