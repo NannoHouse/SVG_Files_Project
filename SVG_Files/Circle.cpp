@@ -1,6 +1,6 @@
 #include "Circle.h"
 #include <cmath>
-#include <iostream>
+
 Circle::Circle(unsigned int _startX, unsigned int _startY, unsigned int _radius, String _color)
 {
 	startX = _startX;
@@ -43,7 +43,6 @@ int Circle::getRadius() const
 }
 
 
-
 void Circle::print()const
 {
 	std::cout << "circle " << startX << ' ' << startY << ' ' << radius << ' ' << color << std::endl;
@@ -81,9 +80,9 @@ void Circle::read()
 	String color;
 	std::cout << "Please enter X,Y, radius and color:";
 	std::cin >> x >> y >> radius >> color;
-	this->startX = x;
-	this->startY = y;
-	this->radius = radius;
+	this->startX = abs(x);
+	this->startY = abs(y);
+	this->radius = abs(radius);
 	this->color = color;
 }
 

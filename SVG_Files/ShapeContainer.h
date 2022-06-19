@@ -19,7 +19,7 @@ public:
 	~ShapeContainer();
 
 	void add(Shape* newShape);
-//	Shape& at(int index);
+	int Size();
 	void print();
 	void erase(const int& position); // validation outside
 	void translate( int width, int hight, int position );

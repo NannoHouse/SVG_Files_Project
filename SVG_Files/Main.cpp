@@ -30,8 +30,8 @@ int main() {
 				myProgram.create();
 				break;
 			case 2:
-				int position;
-				position = 2;
+				unsigned int position;
+				//TODO SPLIT
 				myProgram.erase(position);
 				break;
 			case 3:
@@ -45,8 +45,7 @@ int main() {
 				break;
 			case 10:
 				////remove command part
-				//String fileName;
-				//myProgram.open(fileName);
+				myProgram.open();
 				isOpened = true;
 				break;
 			case 11:

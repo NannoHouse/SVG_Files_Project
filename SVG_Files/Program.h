@@ -48,7 +48,12 @@ public:
 		//if in circle and rectangle 
 	}
 	void erase(unsigned int position) {
-		container.erase(position); // verify position
+		if (position >= container.Size() - 1)
+		{
+			std::cout << "Please enter valid position" << std::endl;
+		}
+		else
+		container.erase(position); 
 	}
 	void translate() {
 		int width, hight, position = -1;
@@ -62,11 +67,12 @@ public:
 	void print() {
 		container.print();
 	}
-	void open(String& file) {
+	void open() {
 		std::ifstream in;
-		in.open("shapes.svg");
+		in.open("figures.svg");
 		if (in)
 		{
+			
 			in >> firstLineOfFIle;
 			in >> secondLineOfFile;
 			in >> thirdLineOfFile;
@@ -78,7 +84,19 @@ public:
 		std::cout << "Successfully opened figures.sv\n";
 	}
 	void save() {
-		//write in file
+		 std::ofstream out;
+		out.open("figures.svg");
+		if (out)
+		{
+			out<< firstLineOfFIle;
+			out << secondLineOfFile;
+			out << thirdLineOfFile;
+		}
+		else {
+			std::cout << "Error at opening file\n";
+		}
+		out.close();
+		std::cout << "Successfully saved in figures.sv\n";
 	}
 
 	void createCircle() {
@@ -96,7 +114,6 @@ public:
 	void createRectangle() {
 		Rectangle newRectangle;
 		newRectangle.read();
-		//Shape* p = &newRectangle;
 		container.add(&newRectangle);
 	}
 };

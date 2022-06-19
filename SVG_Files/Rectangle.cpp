@@ -80,10 +80,10 @@ void Rectangle::read()
 	String color;
 	std::cout << "Please enter X,Y, width, hight and color:";
 	std::cin >> x >> y >> width>>hight >> color;
-	this->startX = x;
-	this->startY = y;
-	this->width = width;
-	this->hight = hight;
+	this->startX = abs(x);
+	this->startY = abs(y);
+	this->width = abs(width);
+	this->hight =abs( hight);
 	this->color = color;
 	
 

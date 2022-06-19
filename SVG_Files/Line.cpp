@@ -1,6 +1,6 @@
 #include "Line.h"
 #include <cmath>
-#include <iostream>
+
 Line::Line(unsigned int _startX, unsigned int _startY, unsigned int _endX, unsigned int _endY, String _color)
 {
 	startX = _startX;
@@ -77,11 +77,15 @@ String Line::getType()
 
 void Line::read()
 {
-	unsigned int x, y, fx, fy;
+	 int x, y, fx, fy;
 	String color;
-	std::cout << "Please enter x,y,fx,fy and color: ";
+	std::cout << "Please enter x,y, fx, fy and color: ";
 	std::cin >> x >> y >> fx >> fy >> color;
-
+	this->startX  = abs(x);
+	this->startY = abs(y);
+	this->endX = abs(fx);
+	this->endY = abs(fy);
+	this->color = color;
 }
 
 

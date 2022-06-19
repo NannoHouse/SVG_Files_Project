@@ -65,6 +65,11 @@ void ShapeContainer::add(Shape* newShape)
 	size++;
 }
 
+int ShapeContainer::Size()
+{
+	return size;
+}
+
 
 void ShapeContainer::print()
 {
