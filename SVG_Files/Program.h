@@ -1,13 +1,33 @@
 #pragma once
 #include "ShapeContainer.h"
+#include "Circle.h"
+#include "Line.h"
+#include "Rectangle.h"
 #include <fstream>
+#include <iostream>
+
 class Program {
 private:
 	ShapeContainer container;
 	String firstLineOfFIle, secondLineOfFile,thirdLineOfFile;
 public:
 	void create() {
+		String shapetype;
+		std::cout << "Please enter shape:";
+		std::cin >> shapetype;
+		if (shapetype == "circle")
+		{
+			createCircle();
+		}
+		else if (shapetype == "line")
+		{
+			createLine();
+		}
+		else {
+			createRectangle();
+		}
 		//read from console
+		
 	}
 	void isWithin() {
 		//if in circle and rectangle 
@@ -26,6 +46,9 @@ public:
 		in.open("shapes.svg");
 		if (in)
 		{
+			in>>firstLineOfFIle;
+			in >> secondLineOfFile;
+			in >> thirdLineOfFile;
 
 		}
 		else {
@@ -38,4 +61,26 @@ public:
 		//write in file
 	}
 
+void createCircle() {
+	int x, y, radius;
+	String color;
+	std::cout << "Please enter X,Y, radius and color:";
+	std::cin >> x >> y >> radius >>color;
+	Circle newCircle(x, y, radius, color);
+	container.add(&newCircle);
+}
+void createLine() {
+	Line line;
+	line.read();
+	container.add(&line);
+
+}
+void createRectangle() {
+	int x, y, radius;
+	String color;
+	std::cout << "Please enter X,Y, radius and color:";
+	std::cin >> x >> y >> radius >> color;
+	//Rectangle newCircle(x, y, radius, color);
+	//container.add(&newCircle);
+}
 };

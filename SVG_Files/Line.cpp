@@ -77,6 +77,15 @@ String Line::getType()
 
 void Line::read()
 {
+	unsigned int x, y, fx, fy;
+	String color;
+	std::cout << "Please enter x,y,fx,fy and color: ";
+	std::cin >> x >> y >> fx >> fy >> color;
+	this->startX = x;
+	this->startY = y;
+	this->endX = fx;
+	this->endY = fy;
+	this->color =color;
 }
 
 

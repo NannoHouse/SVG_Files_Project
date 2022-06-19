@@ -14,13 +14,14 @@ public:
 
 	// functions
 	int getSize() const;
-	void print() const;
-	void add(const char* str);
 	const char* getSymbols() const;
+	void add(const char* str);
+	void print() const;
 	bool contains(const String& segment)const;
 	char* toLower(); // needs to return a copy in order not to change header and lose info
 	char makeLowerCase(char symbol);
 	bool compareWithLowerCh(String& other);
+	char* erase(String& substring);
 
 	// bool operators
 	bool operator<(const String& string) const;

@@ -17,7 +17,6 @@ int main() {
 	int commandNumber;
 	do
 	{
-
 		std::cin >> imput;
 		commandNumber = CommandHelper::getCommand(imput);
 		if (commandNumber <10 && isOpened == false)

@@ -7,7 +7,7 @@ private:
 	unsigned int endX, endY;
 	String color;
 public:
-	Line(unsigned int _startX, unsigned int _startY, unsigned int _endX, unsigned int _endY, String _color);
+	Line(unsigned int _startX=0, unsigned int _startY=0, unsigned int _endX=0, unsigned int _endY=0, String _color="no color");
 	Line(const Line& other); // do i need this?
 	bool isWithinCircle(int cx, int cy, int radius) override;
 	bool isWithinRectangle(int rx, int ry, int width, int hight) override;

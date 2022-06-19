@@ -161,3 +161,19 @@ bool String::compareWithLowerCh(String& other)
 		return false;
 	}
 }
+
+char* String::erase(String& substring)
+{
+	//char* p ;
+	////char* symbol=" " ;
+	////p = strstr(myString, substring.getSymbols());
+	//if (p)
+	//{
+	//	//strncpy_s(p,symbol, substring.getSize());
+	//}
+	//else {
+	//	std::cout << "error when finding string" << std::endl;
+	//}
+	return myString;
+}
+
