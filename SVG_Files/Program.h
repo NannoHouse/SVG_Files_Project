@@ -62,11 +62,9 @@ public:
 	}
 
 void createCircle() {
-	int x, y, radius;
-	String color;
-	std::cout << "Please enter X,Y, radius and color:";
-	std::cin >> x >> y >> radius >>color;
-	Circle newCircle(x, y, radius, color);
+	
+	Circle newCircle;
+	newCircle.read();
 	container.add(&newCircle);
 }
 void createLine() {
@@ -76,11 +74,9 @@ void createLine() {
 
 }
 void createRectangle() {
-	int x, y, radius;
-	String color;
-	std::cout << "Please enter X,Y, radius and color:";
-	std::cin >> x >> y >> radius >> color;
-	//Rectangle newCircle(x, y, radius, color);
-	//container.add(&newCircle);
+
+	Rectangle newRectangle;
+	newRectangle.read();
+	container.add(&newRectangle);
 }
 };

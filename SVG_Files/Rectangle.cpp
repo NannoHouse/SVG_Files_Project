@@ -76,6 +76,17 @@ int Rectangle::getY() const
 
 void Rectangle::read()
 {
+	int x, y, width, hight;
+	String color;
+	std::cout << "Please enter X,Y, width, hight and color:";
+	std::cin >> x >> y >> width>>hight >> color;
+	this->startX = x;
+	this->startY = y;
+	this->width = width;
+	this->hight = hight;
+	this->color = color;
+	
+
 
 }
 

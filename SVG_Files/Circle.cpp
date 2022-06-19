@@ -77,6 +77,14 @@ bool Circle::isWithinRectangle(int rx, int ry, int width, int hight)
 
 void Circle::read()
 {
+	int x, y, radius;
+	String color;
+	std::cout << "Please enter X,Y, radius and color:";
+	std::cin >> x >> y >> radius >> color;
+	this->startX = x;
+	this->startY = y;
+	this->radius = radius;
+	this->color = color;
 }
 
 Shape* Circle::clone()

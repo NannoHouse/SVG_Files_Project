@@ -8,7 +8,7 @@ private:
 	 int width, hight;
 	String color;
 public:
-	Rectangle( int _startX,  int _startY,  int _width,  int _hight, String _color);
+	Rectangle( int _startX=0,  int _startY=0,  int _width=0,  int _hight=0, String _color ="no color");
 	Rectangle(const Rectangle& other);
 	virtual Shape* clone()override;
 	 void print()const override;
