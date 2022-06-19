@@ -56,12 +56,12 @@ bool Rectangle::isWithinRectangle(int rx, int ry, int width, int hight)
 
 void Rectangle::setX( int& number)
 {
-	startX = number;
+	startX += number;
 }
 
 void Rectangle::setY( int& number)
 {
-	startY = number;
+	startY += number;
 }
 
 int Rectangle::getX() const

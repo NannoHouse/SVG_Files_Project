@@ -61,7 +61,7 @@ void ShapeContainer::add(Shape* newShape)
 		resize(capacity * 2);
 	}
 
-	f_shapes[size] = newShape;
+	f_shapes[size] = newShape->clone();
 	size++;
 }
 
@@ -98,7 +98,7 @@ void ShapeContainer::translate( int width,  int hight,  int position)
 			std::cout << "Translated figure in position "<< position<< std::endl;
 		}
 		else {
-			for (int i = 0; i < size-1; i++)
+			for (int i = 0; i < size; i++)
 			{
 				(*f_shapes[i]).setX(width);
 				(*f_shapes[i]).setY(hight);

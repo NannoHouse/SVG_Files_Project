@@ -19,12 +19,12 @@ Circle::Circle(const Circle& other)
 
 void Circle::setX( int& number)
 {
-	startX = number;
+	startX += number;
 }
 
 void Circle::setY( int& number)
 {
-	startY = number;
+	startY += number;
 }
 
 int Circle::getX() const
@@ -68,7 +68,7 @@ bool Circle::isWithinCircle(int cx, int cy, int radius)
 bool Circle::isWithinRectangle(int rx, int ry, int width, int hight)
 {
 	
-	if (getX()<= this->radius + rx && getY()<= this->radius + ry && getX() + this->radius <= rx+width && getY() + this->radius <= ry + hight)
+	if (getX()<= getRadius() + rx && getY()<= getRadius() + ry && getX() + getRadius() <= rx+width && getY() + getRadius() <= ry + hight)
 	{
 		return true;
 	}
