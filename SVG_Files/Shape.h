@@ -1,5 +1,6 @@
 #pragma once
 #include "String.h"
+#include<fstream>
 class Shape {
 public:
 	virtual  ~Shape() = default;
@@ -11,11 +12,9 @@ public:
 	
 	virtual void setX( int& number) =0;
 	virtual void setY( int& number)=0;
-
 	virtual int getX() const = 0;
 	virtual int getY() const  = 0;
 
-	
-
+	virtual void write(std::ofstream& out) const = 0;
 	virtual void read() = 0;
 };

@@ -90,3 +90,8 @@ void Rectangle::read()
 
 }
 
+void Rectangle::write(std::ofstream& out) const
+{
+	out << "<rect x1 =\"" << getX() << "\" y1-=\"" << getY() << "\" width=\"" << this->width << "\" hight=\"" << this->hight << "\" fill=\"" << this->color << "\" />" << std::endl;
+}
+

@@ -25,5 +25,5 @@ public:
 	virtual String getType();
 	//virtual friend std::istream& operator >> (std::istream& in, Shape& shape)override;
 	virtual void read()  override; // da podavame potok po referenciq i da chetem ot veche opened file - std::ifstream& in
-
+	virtual void write(std::ofstream& out) const override;
 };

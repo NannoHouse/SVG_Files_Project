@@ -23,9 +23,7 @@ public:
 	 int getX() const override;
 	 int getY() const override;
 
-
-//	 virtual ~Rectangle() {};
 	 virtual void read()  override;
-
+	 virtual void write(std::ofstream& out) const override;
 
 };

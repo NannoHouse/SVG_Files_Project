@@ -91,6 +91,7 @@ public:
 			out<< firstLineOfFIle;
 			out << secondLineOfFile;
 			out << thirdLineOfFile;
+			container.save(out);
 		}
 		else {
 			std::cout << "Error at opening file\n";

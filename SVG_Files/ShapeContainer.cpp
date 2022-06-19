@@ -32,7 +32,6 @@ ShapeContainer::~ShapeContainer()
 	clean();
 }
 
-
 void ShapeContainer::copy(const ShapeContainer& other)
 {
 	size = other.size;
@@ -47,13 +46,9 @@ void ShapeContainer::copy(const ShapeContainer& other)
 
 void ShapeContainer::clean()
 {
-	//for (int i = 0; i < size; i++)
-	//{
-	//	delete f_shapes[i];
-	//}
-
 	delete[] f_shapes;
 }
+
 void ShapeContainer::add(Shape* newShape)
 {
 	if (size >= capacity)
@@ -133,6 +128,14 @@ void ShapeContainer::withinRectangle(int x, int y, int width, int hight)
 		{
 			f_shapes[i]->print();
 		}
+	}
+}
+
+void ShapeContainer::save(std::ofstream& out) const
+{
+	for (int i = 0; i < size; i++)
+	{
+		f_shapes[i]->write(out);
 	}
 }
 

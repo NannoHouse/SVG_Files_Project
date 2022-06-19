@@ -25,7 +25,7 @@ public:
 	void translate( int width, int hight, int position );
 	void withinCircle(int x, int y, int radius);//TODO
 	void withinRectangle(int x, int y, int width, int hight);//TODO
-
+	void save(std::ofstream& out) const;
 
 	//friend std::ifstream& operator>>(std::ifstream& in, ShapeContainer& container);
 

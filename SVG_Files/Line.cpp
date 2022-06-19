@@ -88,6 +88,11 @@ void Line::read()
 	this->color = color;
 }
 
+void Line::write(std::ofstream& out) const
+{
+	out << "<line x1 =\"" << getX() << "\" y1-=\"" << getY() << "\" x2=\"" << getEndX() << "\" y2=\"" << getEndY() << "\" fill=\"" << this->color << "\" />" << std::endl;
+}
+
 
 Shape* Line::clone() 
 {
