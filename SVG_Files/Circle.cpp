@@ -88,7 +88,7 @@ void Circle::read()
 
 void Circle::write(std::ofstream& out) const
 {
-	out << "<circle cx =\""<<getX() <<"\" cy-=\""<<getY()<<"\" r=\""<<getRadius()<<"\" fill=\""<<this->color<<"\" />"<<std::endl;
+	out << "<circle cx =\""<<getX() <<"\" cy=\""<<getY()<<"\" r=\""<<getRadius()<<"\" fill=\""<<this->color<<"\" />"<<std::endl;
 }
 
 Shape* Circle::clone()

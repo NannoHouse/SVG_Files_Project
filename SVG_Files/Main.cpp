@@ -13,7 +13,7 @@ int main() {
 	Program myProgram;
 	bool isRunning = true;
 	bool isOpened = false;
-
+	int position = 0;
 	int commandNumber;
 	do
 	{
@@ -30,8 +30,7 @@ int main() {
 				myProgram.create();
 				break;
 			case 2:
-				unsigned int position;
-				//TODO SPLIT
+				std::cin >> position;
 				myProgram.erase(position);
 				break;
 			case 3:
@@ -44,12 +43,11 @@ int main() {
 				myProgram.print();
 				break;
 			case 10:
-				////remove command part
 				myProgram.open();
 				isOpened = true;
 				break;
 			case 11:
-				if (isAlreadyOpened(isOpened)) // needt to be opened for it to be closed
+				if (isAlreadyOpened(isOpened))
 				{
 					isOpened = false;
 				}
@@ -57,11 +55,10 @@ int main() {
 			case 12:
 				if (isOpened == false)
 				{
-					//myProgram.exit();
-					isRunning = false;
+					isRunning = false; 
 				}
 				else {
-					std::cout << "YOu need to close the file first" << std::endl;
+					std::cout << "Yuu need to close the file first" << std::endl;
 				}
 				break;
 			case 13:
@@ -75,38 +72,6 @@ int main() {
 			}
 		}
 	} while (isRunning);
-
-	//ShapeContainer container;
-//	Circle crcl(2,2,1,"pink");
-	//Circle crc2(5, 5, 10, "green");
-
-	//Rectangle rect(5,5,10,10,"black");
-	///Rectangle rect2(-1000, -1000, 10, 20, "white");
-	//Rectangle rect3(100, 60, 10, 10, "pink");
-
-	//Line lin(2,3,4,5,"orange");
-	//Line lin2(0, 0, 11, 5, "orange");
-
-	//
-	//container.add(&rect);
-	//container.add(&crc2);
-
-	//container.add(&rect2);
-	//container.add(&rect3);
-
-	//container.add(&rect2);
-	//container.add(&rect3);
-
-	//container.withinCircle(0,0,5);
-	//container.withinRectangle(0,0,30,30);
-	//container.erase(2);
-
-//	container.add(&rect);
-	//container.add(&lin);
-	//container.at(1).
-	//container.translate(20, 1, 2);
-	//container.print();
-
 
 	return 0;
 }

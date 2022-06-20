@@ -162,18 +162,13 @@ bool String::compareWithLowerCh(String& other)
 	}
 }
 
-char* String::erase(String& substring)
+ char String::charAt(int index)const 
 {
-	//char* p ;
-	////char* symbol=" " ;
-	////p = strstr(myString, substring.getSymbols());
-	//if (p)
-	//{
-	//	//strncpy_s(p,symbol, substring.getSize());
-	//}
-	//else {
-	//	std::cout << "error when finding string" << std::endl;
-	//}
-	return myString;
+	if (index > getSize() - 1 || index < 0) {
+		std::cout << "Not entered correct position" << std::endl;
+	}
+
+	return myString[index];
 }
+
 

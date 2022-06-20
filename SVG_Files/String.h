@@ -21,7 +21,7 @@ public:
 	char* toLower(); // needs to return a copy in order not to change header and lose info
 	char makeLowerCase(char symbol);
 	bool compareWithLowerCh(String& other);
-	char* erase(String& substring);
+	 char charAt(int index)const;
 
 	// bool operators
 	bool operator<(const String& string) const;
