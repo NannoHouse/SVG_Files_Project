@@ -1,76 +1,68 @@
 #pragma once
 #include<cstring>
 #include<iostream>
-const int Create = 1;// creates and adds
-const int Erase = 2;
-const int Translate = 3;
-const int Within = 4;
-const int Print = 5;
-const int notFound = 0;
-const int Open = 10;
-const int Close = 11;
-const int Exit = 12;
-const int Save = 13;
-const int Help = 0;
 
+
+enum COMMANDS {
+	CREATE, ERASE, TRANSLATE, WITHIN, PRINT, CLOSE, SAVE, SAVE_AS, HELP, NOT_FOUND, EXIT, OPEN
+};
 
 ///Class CommandHelper hold all the commands that a user can do
 class CommandHelper {
 public:
-	static int getCommand(const String command);
+	static COMMANDS getCommand(const String& command);
 	static void printCommands();
 };
 
 
 /// getCommand accepts a string and returns the command that is equal to it
-int CommandHelper::getCommand(const String command)
+COMMANDS CommandHelper::getCommand(const String& command)
 {
 	if (command.contains("create"))
 	{
-		return Create;
+		return CREATE;
 	}
 	else if (command.contains( "erase"))
 	{
-		return Erase;
+		return ERASE;
 	}
 	else if (command.contains("translate"))
 	{
-		return Translate;
+		return TRANSLATE;
 	}
 	else if (command.contains("within"))
 	{
-		return Within;
+		return WITHIN;
 	}
 	else if (command.contains("print"))
 	{
-		return Print;
+		return PRINT;
 	}
 	else if (command.contains("open"))
 	{
-		return Open;
+		return OPEN;
 	}
 	else if (command.contains("close"))
 	{
-		return Close;
+		return CLOSE;
 	}
 	else if (command.contains("exit"))
 	{
-		return Exit;
+		return EXIT;
 	}
 	else if (command.contains("save"))
 	{
-		return Save;
+		return SAVE;
 	}
 	else if (command.contains("help"))
 	{
-		return Help;
+		return HELP;
 	}
 	else 
 	{
-		return notFound;
+		return NOT_FOUND;
 	}
 
-	return 0;
 }
 
 ///command prints out all possible commands 

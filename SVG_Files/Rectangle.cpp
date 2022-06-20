@@ -79,8 +79,6 @@ void Rectangle::read()
 	this->hight =abs( hight);
 	this->color = color;
 	
-
-
 }
 
 void Rectangle::write(std::ofstream& out) const

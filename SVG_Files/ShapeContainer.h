@@ -56,6 +56,4 @@ public:
 	///Writes all svg tags inside the svg container in a stream output
 	void save(std::ofstream& out) const;
 
-	//friend std::ifstream& operator>>(std::ifstream& in, ShapeContainer& container);
-
 };

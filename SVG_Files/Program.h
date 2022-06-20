@@ -14,7 +14,6 @@ private:
 	String firstLineOfFIle, secondLineOfFile, thirdLineOfFile;
 public:
 
-
 	/// create creates a shape and adds it to the container
 	void create() {
 		String shapetype;
@@ -117,7 +116,7 @@ public:
 			std::cout << "Error at opening file\n";
 		}
 		in.close();
-		std::cout << "Successfully opened figures.sv\n";
+		std::cout << "Successfully opened figures.svg\n";
 	}
 
 

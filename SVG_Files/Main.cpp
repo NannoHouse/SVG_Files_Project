@@ -8,7 +8,14 @@
 #include "Rectangle.h"
 
 bool isAlreadyOpened(bool& filestatus);
+void startProgram();
 int main() {
+
+	startProgram();
+	return 0;
+}
+
+void startProgram() {
 	String imput;
 	Program myProgram;
 	bool isRunning = true;
@@ -19,70 +26,68 @@ int main() {
 	{
 		std::cin >> imput;
 		commandNumber = CommandHelper::getCommand(imput);
-		if (commandNumber <10 && isOpened == false)
+		if (commandNumber < HELP && isOpened == false)
 		{
-			std::cout << "You need to open file first"<<std::endl;
+			std::cout << "You need to open file first" << std::endl;
 		}
 		else {
 			switch (commandNumber)
 			{
-			case 0:
-				CommandHelper::printCommands();
-				break;
-			case 1:
-				myProgram.create();
-				break;
-			case 2:
-				std::cout << "Please enter position: ";
-				std::cin >> position;
-				myProgram.erase(position);
-				std::cin.ignore();
-				break;
-			case 3:
-				myProgram.translate();
-				break;
-			case 4:
-				myProgram.isWithin();
-				break;
-			case 5:
-				myProgram.print();
-				break;
-			case 10:
-				myProgram.open();
-				isOpened = true;
-				break;
-			case 11:
-				if (isAlreadyOpened(isOpened))
-				{
-					isOpened = false;
-					std::cout << "File is closed!\n";
-				}
-				break;
-			case 12:
-				if (isOpened == false)
-				{
-					isRunning = false; 
-					std::cout << "Exited";
-				}
-				else {
-					std::cout << "You need to close the file first" << std::endl;
-				}
-				break;
-			case 13:
-				if (isAlreadyOpened(isOpened))
-				{
-					myProgram.save();
-				}
-				break;
-			default:
-				std::cout << "CommandNotFound << beep boop" << std::endl;
-				break;
+				case CREATE:
+					myProgram.create();
+					break;
+				case ERASE:
+					std::cout << "Please enter position: ";
+					std::cin >> position;
+					myProgram.erase(position);
+					std::cin.ignore();
+					break;
+				case TRANSLATE:
+					myProgram.translate();
+					break;
+				case WITHIN:
+					myProgram.isWithin();
+					break;
+				case PRINT:
+					myProgram.print();
+					break;
+				case OPEN:
+					myProgram.open();
+					isOpened = true;
+					break;
+				case CLOSE:
+					if (isAlreadyOpened(isOpened))
+					{
+						isOpened = false;
+						std::cout << "File is closed!\n";
+					}
+					break;
+				case EXIT:
+					if (isOpened == false)
+					{
+						isRunning = false;
+						std::cout << "Exited";
+					}
+					else {
+						std::cout << "You need to close the file first" << std::endl;
+					}
+					break;
+				case SAVE:
+					if (isAlreadyOpened(isOpened))
+					{
+						myProgram.save();
+					}
+					break;
+				case HELP:
+					CommandHelper::printCommands();
+					break;
+				case NOT_FOUND:
+					std::cout << "CommandNotFound << beep boop" << std::endl;
+					break;
 			}
 		}
 	} while (isRunning);
-	return 0;
 }
-
 bool isAlreadyOpened(bool& filestatus)
 {
 	if (filestatus)

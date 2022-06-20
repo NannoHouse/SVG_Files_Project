@@ -69,7 +69,6 @@ int ShapeContainer::Size()
 	return size;
 }
 
-
 void ShapeContainer::print()
 {
 	for (int i = 0; i < size; i++)

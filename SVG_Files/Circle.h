@@ -11,6 +11,7 @@ private:
 	String color;
 
 public:
+
 	///constructor with parameters 
 	Circle(unsigned int _startX = 0, unsigned int _startY = 0, unsigned int _radius = 0, String _color = "no color");
 
