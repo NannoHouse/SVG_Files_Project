@@ -46,9 +46,9 @@ void ShapeContainer::copy(const ShapeContainer& other)
 
 void ShapeContainer::clean()
 {
-	for (int i = 0; i < size - 1; i++)
+	for (int i = 0; i < size ; i++)
 	{
-		delete f_shapes[i]; // taka li e
+		delete f_shapes[i]; 
 	}
 	delete[] f_shapes;
 }
