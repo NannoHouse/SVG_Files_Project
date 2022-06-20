@@ -9,14 +9,7 @@ Line::Line(unsigned int _startX, unsigned int _startY, unsigned int _endX, unsig
 	endY = _endY;
 	color = _color;
 }
-Line::Line(const Line& other)
-{
-	startX = other.startX;
-	startY = other.startY;
-	endX = other.endX;
-	endY = other.endY;
-	color = other.color;
-}
+
 bool Line::isWithinCircle(int cx, int cy, int radius)
 {
 	double distanceStart = sqrt(pow(getX() - cx, 2) + pow(getY() - cy, 2));

@@ -150,10 +150,6 @@ public:
 				{
 					strNumber += imput.charAt(i);
 				}
-				else if (hasOpened && counterVariable ==0)
-				{
-					
-				}
 				if (imput.charAt(i) == '"' && hasOpened == false)
 				{
 					hasOpened = true;
@@ -190,10 +186,112 @@ public:
 		}
 	}
 	void readRect(String& imput) {
-
+		int x = 0, y = 0, width = 0, hight = 0;
+		String color;
+		int counterVariable = 5;
+		bool hasOpened = false;
+		std::string strNumber; // couldn't digure out how to do it 
+		while (counterVariable != 0)
+		{
+			for (int i = 0; i < imput.getSize(); i++)
+			{
+				if (hasOpened && counterVariable != 0)
+				{
+					strNumber += imput.charAt(i);
+				}
+				if (imput.charAt(i) == '"' && hasOpened == false)
+				{
+					hasOpened = true;
+				}
+				else if (imput.charAt(i) == '\"' && hasOpened == true)
+				{
+					strNumber.pop_back();
+					hasOpened = false;
+					switch (counterVariable)
+					{
+					case 5:
+						x = std::stoi(strNumber);
+						counterVariable--;
+						strNumber = "";
+						break;
+					case 4:
+						y = std::stoi(strNumber);
+						counterVariable--;
+						strNumber = "";
+						break;
+					case 3:
+						width = std::stoi(strNumber);
+						counterVariable--;
+						strNumber = "";
+						break;
+					case 2:
+						hight = std::stoi(strNumber);
+						counterVariable--;
+						strNumber = "";
+						break;
+					case 1:
+						color = strNumber.data();
+						counterVariable--;
+					}
+				}
+			}
+			Rectangle newRectangle(x, y, width, hight, color);
+			container.add(&newRectangle);
+		}
 	}
 	void readLine(String& imput) {
-
+		int x = 0, y = 0, fx = 0,fy=0;
+		String color;
+		int counterVariable = 5;
+		bool hasOpened = false;
+		std::string strNumber; // couldn't digure out how to do it 
+		while (counterVariable != 0)
+		{
+			for (int i = 0; i < imput.getSize(); i++)
+			{
+				if (hasOpened && counterVariable != 0)
+				{
+					strNumber += imput.charAt(i);
+				}
+				if (imput.charAt(i) == '"' && hasOpened == false)
+				{
+					hasOpened = true;
+				}
+				else if (imput.charAt(i) == '\"' && hasOpened == true)
+				{
+					strNumber.pop_back();
+					hasOpened = false;
+					switch (counterVariable)
+					{
+					case 5:
+						x = std::stoi(strNumber);
+						counterVariable--;
+						strNumber = "";
+						break;
+					case 4:
+						y = std::stoi(strNumber);
+						counterVariable--;
+						strNumber = "";
+						break;
+					case 3:
+						fx = std::stoi(strNumber);
+						counterVariable--;
+						strNumber = "";
+						break;
+					case 2:
+						fy = std::stoi(strNumber);
+						counterVariable--;
+						strNumber = "";
+						break;
+					case 1:
+						color = strNumber.data();
+						counterVariable--;
+					}
+				}
+			}
+			Line newLine(x, y, fx,fy, color);
+			container.add(&newLine);
+		}
 	}
 };
 

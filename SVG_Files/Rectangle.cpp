@@ -6,15 +6,8 @@ Rectangle::Rectangle( int _startX,  int _startY,  int _width,  int _hight, Strin
 	startY = _startY;
 	width = _width;
 	hight = _hight;
+	color = _color;
 
-}
-Rectangle::Rectangle(const Rectangle& other)
-{
-	color = other.color;
-	startX = other.startX;
-	startY = other.startY;
-	width = other.width;
-	hight = other.hight;
 }
 Shape* Rectangle::clone()
 {

@@ -10,9 +10,7 @@ private:
 
 public:
 	Circle(unsigned int _startX=0, unsigned int _startY=0, unsigned int _radius=0, String _color ="no color");
-	Circle(const Circle& other); // do i need this
-
-			//getters and setters
+	
 	 void setX( int& number) override;
 	 void setY( int& number) override;
 	
