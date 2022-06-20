@@ -46,6 +46,10 @@ void ShapeContainer::copy(const ShapeContainer& other)
 
 void ShapeContainer::clean()
 {
+	for (int i = 0; i < size - 1; i++)
+	{
+		delete f_shapes[i]; // taka li e
+	}
 	delete[] f_shapes;
 }
 
@@ -70,7 +74,7 @@ void ShapeContainer::print()
 {
 	for (int i = 0; i < size; i++)
 	{
-		std::cout << i << ". ";
+		std::cout << i+1 << ". ";
 		f_shapes[i]->print();
 	}
 	std::cout << "ENDED PRINTING" << std::endl;
@@ -103,31 +107,43 @@ void ShapeContainer::translate( int width,  int hight,  int position)
 				(*f_shapes[i]).setX(width);
 				(*f_shapes[i]).setY(hight);
 			}
-			std::cout << "Translated all figures" << std::endl;
+			std::cout << "Translated all figures " << std::endl;
 		}
 }
 
 void ShapeContainer::withinCircle(int x, int y, int radius)
 {
+	bool printed = false;
 	for (int i = 0; i < size ; i++)
 	{
 		if ((*f_shapes[i]).isWithinCircle(x, y, radius))
 		{
 			f_shapes[i]->print();
+			printed = true;
 		}
 
+	}
+	if (printed == false)
+	{
+		std::cout << "No figures are located within circle " << x << ' ' << y << ' ' << radius<< '\n';
 	}
 	
 }
 
 void ShapeContainer::withinRectangle(int x, int y, int width, int hight)
 {
+	bool printed = false;
 	for (int i = 0; i < size; i++)
 	{
 		if ((*f_shapes[i]).isWithinRectangle(x,y,width, hight))
 		{
 			f_shapes[i]->print();
+			bool printed = true;
 		}
+	}
+	if (printed == false)
+	{
+		std::cout << "No figures are located within circle "<< x<<' '<<y <<' '<< width <<' '<< hight << '\n';
 	}
 }
 

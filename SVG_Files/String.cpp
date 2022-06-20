@@ -19,10 +19,7 @@ String& String::operator=(const String& other)
 {
 	if (this != &other)
 	{
-		if (myString != nullptr)
-		{
 			delete[] myString;
-		}
 		myString = new char[strlen(other.getSymbols()) + 1];
 		strcpy_s(myString, other.getSize() + 1, other.getSymbols());
 	}
@@ -57,7 +54,7 @@ void String::add(const char* str)
 	char* temp = new char[strlen(myString) + strlen(str) + 1];
 	strcpy_s(temp, strlen(myString) + strlen(str) + 1, myString);
 	strcat_s(temp, strlen(myString) + strlen(str) + 1, str);
-	delete myString;
+	delete[] myString;
 	myString = temp;
 }
 

@@ -11,12 +11,18 @@ const int Open = 10;
 const int Close = 11;
 const int Exit = 12;
 const int Save = 13;
+const int Help = 0;
 
+
+///Class CommandHelper hold all the commands that a user can do
 class CommandHelper {
 public:
 	static int getCommand(const String command);
-
+	static void printCommands();
 };
+
+
+/// getCommand accepts a string and returns the command that is equal to it
 int CommandHelper::getCommand(const String command)
 {
 	if (command.contains("create"))
@@ -55,11 +61,28 @@ int CommandHelper::getCommand(const String command)
 	{
 		return Save;
 	}
+	else if (command.contains("help"))
+	{
+		return Help;
+	}
 	else 
 	{
 		return notFound;
 	}
 
 	return 0;
+}
+
+///command prints out all possible commands 
+void CommandHelper::printCommands() {
+
+	std::cout << "The following commands are supported:\n";
+	std::cout << "Open <File>     opens <file>\n" ;
+	std::cout << "close           closes currently opened file\n";
+	std::cout << "save            saves the current open file \n";
+	std::cout << "saveAs <File>   save the currently open file in <file> \n";
+	std::cout << "help            prints this information  \n";
+	std::cout << "exit            exits the program  \n";
+
 }
 
