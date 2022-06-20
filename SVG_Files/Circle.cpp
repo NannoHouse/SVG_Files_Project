@@ -9,7 +9,6 @@ Circle::Circle(unsigned int _startX, unsigned int _startY, unsigned int _radius,
 	color = _color;
 }
 
-
 void Circle::setX( int& number)
 {
 	startX += number;
@@ -34,7 +33,6 @@ int Circle::getRadius() const
 {
 	return radius;
 }
-
 
 void Circle::print()const
 {

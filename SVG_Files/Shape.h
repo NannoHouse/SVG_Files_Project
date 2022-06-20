@@ -1,8 +1,14 @@
 #pragma once
 #include "String.h"
 #include<fstream>
+/// <summary>
+/// Virtal class holding pure virtual functions which need to be implemented in every single inherited class
+/// </summary>
 class Shape {
 public:
+	/// <summary>
+	/// 
+	/// </summary>
 	virtual  ~Shape() = default;
 	virtual Shape* clone()  = 0;
 	virtual void print() const = 0;

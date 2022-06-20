@@ -79,9 +79,9 @@ void ShapeContainer::print()
 
 void ShapeContainer::erase(const int& position) 
 {
-	String type = f_shapes[position]->getType();
+	String type = f_shapes[position-1]->getType();
 
-	for (int i = position; i < size  ; i++)
+	for (int i = position-1; i < size  ; i++)
 	{
 		f_shapes[i] = f_shapes[i + 1];
 	}

@@ -32,6 +32,7 @@ int main() {
 			case 2:
 				std::cin >> position;
 				myProgram.erase(position);
+				std::cin.ignore();
 				break;
 			case 3:
 				myProgram.translate();

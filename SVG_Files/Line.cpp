@@ -29,6 +29,7 @@ bool Line::isWithinRectangle(int rx, int ry, int width, int hight)
 	}
 	return false;
 }
+
 void Line::setX( int& number)
 {
 	startX += number;
@@ -39,6 +40,7 @@ void Line::setY( int& number )
 	startY += number;
 	endY += number;
 }
+
 int Line::getX() const
 {
 	return startX;
@@ -47,27 +49,28 @@ int Line::getY() const
 {
 	return startY;
 }
-
 int Line::getEndX() const
 {
 	return endX;
 }
-
 int Line::getEndY() const
 {
 	return endY;
+}
+
+Shape* Line::clone() 
+{
+	return new Line(*this);
+}
+String Line::getType()
+{
+	return "line";
 }
 
 void Line::print() const
 {
 	std::cout << "line " << startX << ' ' << startY << ' ' << endX << ' ' << endY << ' ' << color << std::endl;
 }
-
-String Line::getType()
-{
-	return "line";
-}
-
 void Line::read()
 {
 	 int x, y, fx, fy;
@@ -80,14 +83,9 @@ void Line::read()
 	this->endY = abs(fy);
 	this->color = color;
 }
-
 void Line::write(std::ofstream& out) const
 {
 	out << "<line x1 =\"" << getX() << "\" y1-=\"" << getY() << "\" x2=\"" << getEndX() << "\" y2=\"" << getEndY() << "\" fill=\"" << this->color << "\" />" << std::endl;
 }
 
 
-Shape* Line::clone() 
-{
-	return new Line(*this);
-}

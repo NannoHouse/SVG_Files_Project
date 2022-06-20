@@ -48,7 +48,7 @@ public:
 		//if in circle and rectangle 
 	}
 	void erase(unsigned int position) {
-		if (position >= container.Size() - 1)
+		if (position >= container.Size() )
 		{
 			std::cout << "Please enter valid position" << std::endl;
 		}

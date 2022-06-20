@@ -9,10 +9,6 @@ private:
 public:
 	Line(unsigned int _startX=0, unsigned int _startY=0, unsigned int _endX=0, unsigned int _endY=0, String _color="no color");
 
-	bool isWithinCircle(int cx, int cy, int radius) override;
-	bool isWithinRectangle(int rx, int ry, int width, int hight) override;
-
-		//getters and setters
 	void setX( int& number) override ;
 	void setY( int& number) override;
 
@@ -20,10 +16,13 @@ public:
 	int getY() const override;
 	int getEndX()const;
 	int getEndY()const;
-	virtual void print() const override;
+
+	bool isWithinCircle(int cx, int cy, int radius) override;
+	bool isWithinRectangle(int rx, int ry, int width, int hight) override;
+
 	Shape* clone() override;
 	virtual String getType();
-	//virtual friend std::istream& operator >> (std::istream& in, Shape& shape)override;
-	virtual void read()  override; // da podavame potok po referenciq i da chetem ot veche opened file - std::ifstream& in
+	virtual void print() const override;
+	virtual void read()  override; 
 	virtual void write(std::ofstream& out) const override;
 };
